@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<section id="showcase">
+      <div class="container">
+        <h1>Professional and high quality Software and Websites!</h1>
+        <p>Here at PyroBit we strive to deliver high quality software and website services </p>
+      </div>
+    </section>
+
+    <section id="newsletter">
+      <div style="align-content:center" class="container">
+        <h1 style="color:white">Subscribe To Our Newsletter</h1>
+        @using(Html.BeginForm("Subscribe", "Newsletter"))
+        {
+        	@Html.TextBox("EmailAddress", string.Empty, new {@placeholder="Enter E-mail Address"});
+        	<input type="submit" class="btn btn-primary">
+        }
+      </div>
+    </section>
+
+    <section id="boxes">
+      <div class="container">
+        <div class="box">
+          <img src="../Images/html.jpg">
+          <h3>Web Development</h3>
+          <p>Does your business need a website? Slack Studios will provide a high quality website and additional bug fixing</p>
+        </div>
+        <div class="box">
+          <img src="../Images/windowsform.png">
+          <h3>Software Development</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies</p>
+        </div>
+		<div class="box">
+		  <img src="../Images/VideoEditing.jpg">
+		  <h3>Graphic Design & Video Editing</h3>
+		  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus mi augue, viverra sit amet ultricies</p>
+		</div>
+      </div>
+    </section>
+</body>
+</html>

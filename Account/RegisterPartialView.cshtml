@@ -1,0 +1,32 @@
+﻿@model SlackStudiosWebsite.Models.RegisterViewModel
+
+<html>
+<body>
+<div id="signupform">
+    <form class="modal-content animate" action="Login/Register">
+        <div class="imgcontainer">
+            <span onclick="document.getElementById('signupform').style.display='none'" class="close" title="Close Modal">&times;</span>
+            <img src="~/img/AddUserIcon.png" height="500" width="500" alt="Avatar" class="avatar">
+        </div>
+
+        <div class="container">
+            <label><b>E-Mail Address</b></label>
+            @Html.TextBoxFor(model => model.Email, new { @type = "email", @placeholder= "Enter E-Mail", @name = "uname", @required = true});
+            <input type="email" placeholder="Enter E-Mail" name="uname" required>
+
+            <label><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+
+            <label><b>Confirm Password</b></label>
+            <input type="password" placeholder="Confirm Password" name="psw" required>
+            <button type="submit">Login</button>
+        </div>
+
+        <div class="container" style="background-color:#f1f1f1">
+            <button type="button" onclick="document.getElementById('signupform').style.display='none'" class="cancelbtn">Cancel</button>
+            <span class="psw">Forgot <a href="#">password?</a></span>
+        </div>
+    </form>
+</div>
+</body>
+</html>
